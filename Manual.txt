@@ -1,13 +1,68 @@
-adb shell settings put global user_refresh_rate 144 adb shell settings put global preferred_refresh_rate 144 adb shell settings put global refresh.active 1 adb shell settings put global refresh_rate_mode 3 adb shell settings put global refresh_rate_force_high 1 adb shell settings put global peak_refresh_rate 144 adb shell settings put global min_refresh_rate 144 adb shell settings put global max_refresh_rate 144 adb shell settings put global target_refresh_rate 144 adb shell settings put global sys.display.refresh_rate 144 adb shell settings put global refresh_rate_switching_type 1 adb shell settings put global settings_enable_monitor_physical_refresh_rate 1 adb shell settings put global show_refresh_rate 1 adb shell settings put global show_refresh_rate_switch 1 adb shell settings put global surface_flinger.use_content_detection_for_refresh_rate false
+SECTION 2 — COPY-READY COMMAND BLOCKS
+(Non-root usage — suitable for most devices)
+──────────────────────────────────────────────────────────
+adb shell settings put global user_refresh_rate 144
+adb shell settings put global preferred_refresh_rate 144
+adb shell settings put global refresh.active 1
+adb shell settings put global refresh_rate_mode 3
+adb shell settings put global refresh_rate_force_high 1
+adb shell settings put global peak_refresh_rate 144
+adb shell settings put global min_refresh_rate 144
+adb shell settings put global max_refresh_rate 144
+adb shell settings put global target_refresh_rate 144
+adb shell settings put global sys.display.refresh_rate 144
+adb shell settings put global refresh_rate_switching_type 1
+adb shell settings put global settings_enable_monitor_physical_refresh_rate 1
+adb shell settings put global show_refresh_rate 1
+adb shell settings put global show_refresh_rate_switch 1
+adb shell settings put global surface_flinger.use_content_detection_for_refresh_rate false
 
-adb shell settings put global game_refresh_rate_force 1 adb shell settings put global game_overlay_refresh_rate 144 adb shell settings put global game_refresh_rate_pkgs "com.mobile.legends,com.tencent.ig,com.activision.callofduty.shooter" adb shell settings put global game_refresh_rate_values "144,144,144"
+adb shell settings put global game_refresh_rate_force 1
+adb shell settings put global game_overlay_refresh_rate 144
+adb shell settings put global game_refresh_rate_pkgs "com.mobile.legends,com.tencent.ig,com.activision.callofduty.shooter"
+adb shell settings put global game_refresh_rate_values "144,144,144"
 
-adb shell settings put system display_refresh_rate 144 adb shell settings put system display_min_refresh_rate 144 adb shell settings put system hwui_refresh_rate 144 adb shell settings put system sf.refresh_rate 144 adb shell settings put system min_refresh_rate 144 adb shell settings put system min_refresh_rate_for_fps_boost 144 adb shell settings put system peak_refresh_rate 144 adb shell settings put system peak_refresh_rate_float 144 adb shell settings put system peak_refresh_rate_override 144 adb shell settings put system peak_refresh_rate_forced 144 adb shell settings put system thermal_limit_refresh_rate 144 adb shell settings put system max_refresh_rate 144 adb shell settings put system max_refresh_rate_for_fps_boost 144 adb shell settings put system max_refresh_rate_for_gaming 144 adb shell settings put system max_refresh_rate_for_ui 144 adb shell settings put system tran_refresh_mode 144 adb shell settings put system tran_need_recovery_refresh_mode 144 adb shell settings put system vendor.display.refresh_rate 144 adb shell settings put system vendor.display.enable_optimize_refresh 1 adb shell settings put system last_tran_refresh_mode_in_refresh_setting 144 adb shell settings put system display_min_refresh_rate 144
+adb shell settings put system display_refresh_rate 144
+adb shell settings put system display_min_refresh_rate 144
+adb shell settings put system hwui_refresh_rate 144
+adb shell settings put system sf.refresh_rate 144
+adb shell settings put system min_refresh_rate 144
+adb shell settings put system min_refresh_rate_for_fps_boost 144
+adb shell settings put system peak_refresh_rate 144
+adb shell settings put system peak_refresh_rate_float 144
+adb shell settings put system peak_refresh_rate_override 144
+adb shell settings put system peak_refresh_rate_forced 144
+adb shell settings put system thermal_limit_refresh_rate 144
+adb shell settings put system max_refresh_rate 144
+adb shell settings put system max_refresh_rate_for_fps_boost 144
+adb shell settings put system max_refresh_rate_for_gaming 144
+adb shell settings put system max_refresh_rate_for_ui 144
+adb shell settings put system tran_refresh_mode 144
+adb shell settings put system tran_need_recovery_refresh_mode 144
+adb shell settings put system vendor.display.refresh_rate 144
+adb shell settings put system vendor.display.enable_optimize_refresh 1
+adb shell settings put system last_tran_refresh_mode_in_refresh_setting 144
+adb shell settings put system display_min_refresh_rate 144
 
-adb shell settings put secure refresh_rate 144 adb shell settings put secure refresh_rate_mode 144 adb shell settings put secure user_refresh_rate 144 adb shell settings put secure miui_refresh_rate 144 adb shell settings put secure oplus_customize_screen_refresh_rate 144 adb shell settings put secure peak_refresh_rate_forced 144
+adb shell settings put secure refresh_rate 144
+adb shell settings put secure refresh_rate_mode 144
+adb shell settings put secure user_refresh_rate 144
+adb shell settings put secure miui_refresh_rate 144
+adb shell settings put secure oplus_customize_screen_refresh_rate 144
+adb shell settings put secure peak_refresh_rate_forced 144
 
 adb reboot
 
-WARNING FOR ROOTED ONLY adb shell su -c "setprop persist.sys.refresh_rate 144" adb shell su -c "setprop persist.sys.min_refresh_rate 144" adb shell su -c "setprop persist.sys.max_refresh_rate 144" adb shell su -c "setprop ro.surface_flinger.refresh_rate 144" adb shell su -c "setprop vendor.display.refresh_rate 144" adb shell su -c "setprop debug.hwui.refresh_rate 144"
+──────────────────────────────────────────────────────────
+SECTION 3 — ROOTED ONLY (use only if device is rooted)
+──────────────────────────────────────────────────────────
+WARNING: Root required. Do NOT run on non-rooted device.
+
+adb shell su -c "setprop persist.sys.refresh_rate 144"
+adb shell su -c "setprop persist.sys.min_refresh_rate 144"
+adb shell su -c "setprop persist.sys.max_refresh_rate 144"
+adb shell su -c "setprop ro.surface_flinger.refresh_rate 144"
+adb shell su -c "setprop vendor.display.refresh_rate 144"
+adb shell su -c "setprop debug.hwui.refresh_rate 144"
 
 adb reboot
